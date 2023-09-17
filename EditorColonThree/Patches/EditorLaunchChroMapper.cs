@@ -24,8 +24,10 @@ namespace EditorColonThree.Patches
                         Plugin.Log.Info("Launching External Editor...");
                         Plugin.Log.Debug("Editor Location: " + Config.Instance.ChroMapperLocation);
                         var process = System.Diagnostics.Process.Start(Config.Instance.ChroMapperLocation);
-                        if (process == null)
+                        if (process != null)
                         {
+                            Plugin.Log.Info("External Editor Launched!");
+                            Plugin.Log.Debug("pink cute");
                             Application.Quit();
                             return false;
                         }
