@@ -2,6 +2,6 @@
 	<settings-container>
 		<clickable-text align='Left' text='EditorColonThree Settings' highlight-color='#FFFFFF'  italics='true'></clickable-text>
 		<dropdown-list-setting text='Editor Button Location' value='list-choice' choices='list-options' />
-		<toggle-setting text='Launch Chromapper' hover-hint='Requires that you add the path to CM in the config.' value='launch-chromapper' />
+		<toggle-setting text='Launch External Editor' hover-hint='Requires that you add the path to the editor in the config.' value='launch-chromapper' />
 	</settings-container>
 </bg>

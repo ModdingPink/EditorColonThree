@@ -21,11 +21,14 @@ namespace EditorColonThree.Patches
                 {
                     if (!string.IsNullOrEmpty(Config.Instance.ChroMapperLocation))
                     {
-                        Plugin.Log.Info("Launching ChroMapper...");
-                        Plugin.Log.Debug("ChroMapper Location: " + Config.Instance.ChroMapperLocation);
-                        System.Diagnostics.Process.Start(Config.Instance.ChroMapperLocation);
-                        Application.Quit();
-                        return false;
+                        Plugin.Log.Info("Launching External Editor...");
+                        Plugin.Log.Debug("Editor Location: " + Config.Instance.ChroMapperLocation);
+                        var process = System.Diagnostics.Process.Start(Config.Instance.ChroMapperLocation);
+                        if (process == null)
+                        {
+                            Application.Quit();
+                            return false;
+                        }
                     }
                 }
             }
