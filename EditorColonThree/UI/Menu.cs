@@ -22,8 +22,16 @@ namespace EditorColonThree.UI
         [UIValue("list-choice")]
         private string listChoice = "Right";
 
+        [UIValue("launch-chromapper")]
+        private bool launchChroMapper = true;
+
         [UIAction("#apply")]
-        public void OnApply() => Config.Instance.Location = listChoice;
+        public void OnApply()
+        {
+            Config.Instance.Location = listChoice;
+            Config.Instance.LaunchChroMapper = launchChroMapper;
+        }
+
 
         public void Initialize()
 		{

@@ -8,6 +8,7 @@ namespace EditorColonThree
     {
         public static Config? Instance { get; set; }
         public virtual string Location { get; set; } = "Right";
-
+        public virtual bool LaunchChroMapper { get; set; } = true;
+        public virtual string ChroMapperLocation { get; set; } = "";
     }
 }

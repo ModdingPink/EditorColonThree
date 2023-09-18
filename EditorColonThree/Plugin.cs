@@ -22,7 +22,7 @@ namespace EditorColonThree
     public class Plugin
     {
         internal static Assembly Assembly { get; } = Assembly.GetExecutingAssembly();
-
+        internal static IPALogger Log { get; private set; }
 
 
         [Init]
@@ -30,7 +30,7 @@ namespace EditorColonThree
         {
 
             Config.Instance = conf.Generated<Config>();
-
+            Log = logger;
             zenjector.UseLogger(logger);
             zenjector.Install<MenuInstaller>(Location.Menu);
 
